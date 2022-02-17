@@ -28,12 +28,14 @@
     <main>
         <div class="container">
            <div class="row g-5 d-flex justify-content-center align-items-center">
+               <!-- image area  -->
                 <div class="col-lg-7">
                     <img class="img-fluid" src="./img/money.jpg" alt="">
                 </div>
 
-                <div class="col-lg-5 bg-light p-5">
-                    <div class=" p-3 d-flex flex-column justify-content-center align-items-end">
+                <!-- calculate area  -->
+                <div class="col-lg-5 bg-light p-4">
+                    <div class=" px-5 d-flex flex-column justify-content-center align-items-end">
                         <div class="d-block m-auto">
                             <h5 class="text-center fw-bold mt-3">Income</h5>
                         </div>
@@ -58,16 +60,33 @@
                         </div>  <br>   
 
                         <div class="d-block m-auto">
-                            <button class="btn-primary text-white border-0 px-4 py-2  rounded fs-5">Calculate</button>
+                            <button id="calculate-button" class="btn-primary text-white border-0 px-4 py-2  rounded fs-5">Calculate</button>
                         </div>
+
                         <div class="d-block m-auto">
                             <h5 class=" mt-4 text-center fw-bold ">Total Expenses: &nbsp;<span id="total-expenses"></span></h5> 
                         </div>
-                        <div class="d-block m-auto">
-                            <h5 class=" mt-2 text-center fw-bold ">Balance: &nbsp; <span id="balance"></span></h5><br> 
-                        </div>
-                        
 
+                        <div class="d-block m-auto">
+                            <h5 class=" mt-3 text-center fw-bold ">Balance: &nbsp; <span id="balance"></span></h5><br> 
+                        </div>
+
+                        <div class="d-block m-auto">
+                            <div class="d-flex flex-row justify-content-center align-items-center">
+                                <p class="fw-bold">Save: &nbsp;</p>
+                                <p class="input px-5 py-2 rounded">20</p>
+                                <p> &nbsp; %  &nbsp;</p>
+                                <button id="save-button" class="btn-primary text-white border-0 px-4 py-2 rounded mb-3">Save</button>
+                            </div>
+                        </div>
+
+                        <div class="d-block m-auto">
+                            <h5 class=" mt-4 text-center fw-bold ">Saving Amount: &nbsp;<span id="saving-amount"></span></h5> 
+                        </div>
+
+                        <div class="d-block m-auto">
+                            <h5 class=" mt-3 text-center fw-bold ">Remaining Balance: &nbsp; <span id="remaining-balance"></span></h5><br> 
+                        </div>
                                          
                                         
                                          
