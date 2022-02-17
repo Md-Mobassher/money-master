@@ -42,9 +42,10 @@ document.getElementById('calculate-button').addEventListener('click', function()
 document.getElementById('save-button').addEventListener('click', function(){  
     const incomeAmount = getInputValue('income');
     const totalCosts = getTotalCost();
+    const saveInput = getInputValue('save');
 
     // get saving amount
-    const savingAmount = incomeAmount * 0.2;
+    const savingAmount = incomeAmount * (saveInput / 100);
 
     // set savings Amount
     getOutputValue('saving-amount', savingAmount); 
