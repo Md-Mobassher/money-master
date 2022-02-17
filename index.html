@@ -33,13 +33,17 @@
                 </div>
 
                 <div class="col-lg-5 bg-light p-5">
-                    <div class="d-flex flex-column justify-content-center align-items-end">
-                        <div><h5 class="text-center fw-bold mt-3">Income</h5></div>
+                    <div class=" p-3 d-flex flex-column justify-content-center align-items-end">
+                        <div class="d-block m-auto">
+                            <h5 class="text-center fw-bold mt-3">Income</h5>
+                        </div>
                         <div class="mt-2">
-                            <label class="fw-bold" for="income">Income: &nbsp;</label>
+                            <label class="fw-bold ms-auto" for="income">Income: &nbsp;</label>
                             <input class="input border p-1 px-2 rounded" type="text" id="income" >
                         </div>   
-                        <h5 class="text-center fw-bold mt-4">Expence</h5>                  
+                        <div class="d-block m-auto">
+                            <h5 class="text-center fw-bold mt-4">Expence</h5>
+                        </div>                  
                         <div class="my-2">
                             <label class="fw-bold" for="income">Food: &nbsp;</label>
                             <input class="input border p-1 px-2 rounded" type="text" id="income" >
@@ -53,10 +57,19 @@
                             <input class="input border p-1 px-2 rounded" type="text" id="income" >
                         </div>  <br>   
 
-                        <button class="btn-primary text-white border-0 px-4 py-2  rounded fs-5">Calculate</button>
+                        <div class="d-block m-auto">
+                            <button class="btn-primary text-white border-0 px-4 py-2  rounded fs-5">Calculate</button>
+                        </div>
+                        <div class="d-block m-auto">
+                            <h5 class=" mt-4 text-center fw-bold ">Total Expenses: &nbsp;<span id="total-expenses"></span></h5> 
+                        </div>
+                        <div class="d-block m-auto">
+                            <h5 class=" mt-2 text-center fw-bold ">Balance: &nbsp; <span id="balance"></span></h5><br> 
+                        </div>
+                        
 
-                        <h5 class=" mt-4 text-center fw-bold ">Total Expenses: &nbsp;<span id="total-expenses"></span></h5>                  
-                        <h5 class=" mt-2 text-center fw-bold ">Balance: &nbsp; <span id="balance"></span></h5><br>                  
+                                         
+                                        
                                          
                     </div>
                 </div>
