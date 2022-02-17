@@ -1,36 +1,60 @@
+// input function
 function getInputValue (inputId){
     const inputAmount = document.getElementById(inputId);
     const inputValue = parseFloat(inputAmount.value);   
     return inputValue;
 }
-
+// output function
 function getOutputValue (outputId, setValue){
     const outputAmount = document.getElementById(outputId);
     const outputValue = outputAmount.innerText;
     outputAmount.innerText = setValue;
 }
 
-
-
-document.getElementById('calculate-button').addEventListener('click', function(){
-    //get input value
-    const incomeAmount = getInputValue('income');
+ function getTotalCost( ){
     const foodCost = getInputValue('food');
     const rentCost = getInputValue('rent');
     const clothesCost = getInputValue('clothes');
+    
+    const totalCosts = foodCost + rentCost + clothesCost;
+    return totalCosts;
+ }
 
-    //total cost
-    const totalCost = foodCost + rentCost + clothesCost;
+    // calculate button 
+
+document.getElementById('calculate-button').addEventListener('click', function(){
+   
+    const incomeAmount = getInputValue('income');
+    const totalCost = getTotalCost();
 
     //available balance
     const balance = incomeAmount - totalCost;
-    console.log( balance);
 
-    // total Expenses
-    const expenses = getOutputValue('total-expenses', totalCost);
+    // set Expenses 
+    const totalExpenses = getOutputValue('total-expenses', totalCost);
     
-    // total Expenses
+    // set balances
     const availableBalance = getOutputValue('balance', balance);
-    
-    
+     
 })
+
+
+    // save button
+
+document.getElementById('save-button').addEventListener('click', function(){
+    
+    const savingAmount = incomeAmount * 0.2;
+    const totalExpensess = getOutputValue('total-expenses', totalCosts);
+
+    // set savingsAmount
+    const savingsAmount = getOutputValue('saving-amount', savingAmount); 
+    console.log(savingAmount);
+
+    // reamaining balance 
+    const reamainingBalance = incomeAmount - totalExpensess - savingsAmount;
+
+    // set remaining balance
+    getOutputValue('remaining-balance', reamainingBalance);
+
+})
+
