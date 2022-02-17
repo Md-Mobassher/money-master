@@ -22,8 +22,7 @@ function getOutputValue (outputId, setValue){
 
     // calculate button 
 
-document.getElementById('calculate-button').addEventListener('click', function(){
-   
+document.getElementById('calculate-button').addEventListener('click', function(){  
     const incomeAmount = getInputValue('income');
     const totalCost = getTotalCost();
 
@@ -34,27 +33,26 @@ document.getElementById('calculate-button').addEventListener('click', function()
     const totalExpenses = getOutputValue('total-expenses', totalCost);
     
     // set balances
-    const availableBalance = getOutputValue('balance', balance);
-     
+    const availableBalance = getOutputValue('balance', balance);    
 })
 
 
     // save button
 
-document.getElementById('save-button').addEventListener('click', function(){
-    
-    const savingAmount = incomeAmount * 0.2;
-    const totalExpensess = getOutputValue('total-expenses', totalCosts);
+document.getElementById('save-button').addEventListener('click', function(){  
+    const incomeAmount = getInputValue('income');
+    const totalCosts = getTotalCost();
 
-    // set savingsAmount
-    const savingsAmount = getOutputValue('saving-amount', savingAmount); 
-    console.log(savingAmount);
+    // get saving amount
+    const savingAmount = incomeAmount * 0.2;
+
+    // set savings Amount
+    getOutputValue('saving-amount', savingAmount); 
 
     // reamaining balance 
-    const reamainingBalance = incomeAmount - totalExpensess - savingsAmount;
+    const reamainingBalance = incomeAmount - (totalCosts + savingAmount);
 
     // set remaining balance
     getOutputValue('remaining-balance', reamainingBalance);
-
 })
 
